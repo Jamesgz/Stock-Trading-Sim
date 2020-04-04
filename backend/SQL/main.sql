@@ -89,18 +89,18 @@ CREATE TABLE transitionRecordOwnership (
     ON UPDATE CASCADE ON DELETE CASCADE
 );
 
--- CREATE TABLE transitionRecordOwnershipAlt (
---     playerId INT,
---     dateTime DATETIME,
---     productName CHAR(50),
---     transitionID INT,
---     PRIMARY KEY (playerId, transitionID, dateTime),
---     FOREIGN KEY (playerID) REFERENCES playerOwnership (playerId)
---     ON UPDATE CASCADE ON DELETE CASCADE,
---     FOREIGN KEY (dateTime, productName, playerId) REFERENCES
---     transitionRecordOwnership(dateTime, productName, playerId)
---     ON UPDATE CASCADE ON DELETE CASCADE
--- );
+CREATE TABLE transitionRecordOwnershipAlt (
+    playerId INT,
+    dateTime DATETIME,
+    productName CHAR(50),
+    transitionID INT,
+    PRIMARY KEY (playerId, transitionID, dateTime),
+    FOREIGN KEY (playerId) REFERENCES playerOwnership (playerId)
+    ON UPDATE CASCADE ON DELETE CASCADE,
+    FOREIGN KEY (dateTime, productName, playerId) REFERENCES
+    transitionRecordOwnership(dateTime, productName, playerId)
+    ON UPDATE CASCADE ON DELETE CASCADE
+);
 
 CREATE TABLE shop (
     dayOfWeek INT,

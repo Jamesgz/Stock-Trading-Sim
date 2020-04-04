@@ -191,3 +191,10 @@ INSERT INTO shopItemR VALUES
 ('Apple', 5, 'Supermarket:Regular', 10),
 ('GPU', 7, 'Electronics:Regular', 10),
 ('GPU', 7, 'Electronics:Premium', 100);
+
+INSERT INTO company VALUES
+('Amazon', 'Jeff', 'US', 'AMZN'),
+('Google', 'Sundar', 'US', 'GOOG'),
+('Baidu', 'Robin', 'China', 'BIDU'),
+('Apple', 'Tim', 'US', 'AAPL'),
+('Microsoft', 'Bill', 'US', 'MSFT');
